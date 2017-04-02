@@ -1,0 +1,174 @@
+h1 {
+	text-align: center;
+	color: white;
+}
+
+#sales-graph {
+  background-color: white;
+  width: 60%;
+  height: 380px;
+  margin: auto;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+#sales-graph h3 {
+  text-align: center;
+}
+
+#y-axis {
+  height: 350px;
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  left: 10%;
+  bottom: 40px;
+}
+
+#x-axis {
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  bottom: 40px;
+  background-color: black;
+  z-index: 2;
+}
+
+#bar-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  left: 10%;
+  bottom: 40px;
+  width: 80%;
+  z-index: 1;
+}
+
+.bars {
+  width: 13%;
+  position: relative;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -30px;
+  left: 15px;
+}
+
+.sales-amount {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+}
+
+#north {
+  height: 120px;
+	background-color: orange;
+}
+
+#east {
+	height: 30px;
+	background-color: red;
+}
+
+#south {
+	height: 300px;
+	background-color: blue;
+}
+
+#west {
+	height: 195px;
+	background-color: green;
+}
+
+#reset-graph {
+  font-size: 15px;
+  padding: 10px;
+  background-color: #00c5ff;
+	color: white;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#myAccountNav {
+	width: 761px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#myAccountNav a {
+	color: white;
+	font-size: 18px;
+}
+
+#searchbutton {
+	background-color: #00c5ff;
+	color: white;
+	margin-left: 10px;
+	margin-right: 35px;
+	height: 24px;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#searchResultsDiv {
+	width: 50%;
+	margin: auto;
+	color: white;
+}
+
+#searchResultsDiv h2 {
+	text-align: center;
+	color: white;
+}
+
+#header-right-top {
+	display: inline-flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.Currencies {
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.Lang {
+	padding-bottom: 10px;
+}
+
+#cartLink {
+	color: white;
+	margin-left: -30px;
+}
+
+#yourCart {
+	width: 40%;
+	margin: auto;
+	margin-bottom: 60px;
+}
+
+.cartItem {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.text3 a {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.text a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
