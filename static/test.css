@@ -39,13 +39,13 @@ body{
 	width:442px;
 	position:relative;
 	float:left;
+	padding-left: 40px;
 }
 
 .search {
-	width:630px;
 	position:relative;
 	float:right;
-	padding-top:60px;
+	padding-top:75px;
 }
 
 SELECT {
@@ -144,14 +144,14 @@ SELECT {
 	padding-left:40px;
 }
 
-.text3 a {
+.nav1 a {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
 	color:#FFF;
 	text-decoration:none;
 }
 
-.text3 {
+.nav1 {
 	color:#999;
 }
 
@@ -211,7 +211,7 @@ SELECT {
 
 .blue {
 	width:761px;
-	height:540px;
+	height:567px;
 	background-color:#091b46;
 	position:relative;
 	float:left;
@@ -248,7 +248,7 @@ ul {
 .pic {
 	width:245px;
 	height:260px;
-	background-color:#162851;
+	background-color:white;
 	position:relative;
 	float:left;
 	text-align:center;
