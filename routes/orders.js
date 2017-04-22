@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/orders', function(req, res) {
+router.get('/', function(req, res) {
   res.json(404, {status:false, message:"no results found"})
 });
 
-router.post('/orders/add', function(req, res) {
+router.post('/add', function(req, res) {
   res.json(404, {status:false, message:"no results found"})
 })
 
