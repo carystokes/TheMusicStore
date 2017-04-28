@@ -2,7 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.send('Here is a history of your orders: ')
+  if (req.session.user) {
+    res.render('orders.html')
+  } else {
+    res.send('<h2>Access denied!</h2><a href="/login">You must log in</a>')
+  }
 });
 
 router.post('/add', function(req, res) {
