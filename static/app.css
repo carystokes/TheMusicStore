@@ -124,12 +124,12 @@ h1 {
 #searchResultsDiv {
 	width: 50%;
 	margin: auto;
-	color: white;
+	color: black;
 }
 
 #searchResultsDiv h2 {
 	text-align: center;
-	color: white;
+	color: black;
 }
 
 #header-right-top {

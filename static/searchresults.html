@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <link rel="stylesheet" href="test.css" />
+  <link rel="stylesheet" href="960.css" />
+  <link rel="stylesheet" href="app.css" />
+  <title>My Orders</title>
+</head>
+<body>
+  <div class="content">
+    <div class="header">
+      <div class="logo"><img src="images/02.png" alt="img" /></div>
+      <div class="search" id="header-right-top">
+        <div class="Currencies">Currencies:</div>
+        <div class="US">
+          <form>
+            <select>
+              <option disabled="disabled">Currencies</option>
+              <option value="US Dollar">US Dollar</option>
+              <option value="Euro">Euro</option>
+            </select>
+          </form>
+        </div>
+        <div class="Lang">Language:</div>
+        <div class="eng">
+          <form>
+            <select>
+              <option disabled="disabled">Language</option>
+              <option value="English">English</option>
+              <option value="German">German</option>
+            </select>
+          </form>
+        </div>
+        <div class="shop">
+          <p class="text">
+            <a href="/orders">My Orders</a>|<a href="/customers/update/shipping">My Shipping Data</a>|<a target="_blank" href="">Create an Account</a>|<a target="_blank" href="login">Log In</a>
+          </p>
+        </div>
+        <a href="./cart.html"</a>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="nav">
+      <div class="nav1">
+        <a href="/">Homepage</a>|<a target="_blank" href="">What's new?</a>|<a target="_blank" href="">Specials</a>|<a target="_blank" href="">Reviews</a>|<a target="_blank" href="">Contact us</a>
+      </div>
+      <div class="form">
+        <form method="post" id="searchBox">
+          <input name="textfield" type="text" class="colortext"  placeholder=" Search entire store..." id="searchText"/>
+          <input type="submit" id="searchbutton" value="Search">
+        </form>
+      </div>
+    </div>
+    <div id="searchResultsDiv">
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+      <div class="foot1"><p class="text6"><a href="/orders">My Orders </a> &nbsp;  |&nbsp; <a href="/customers/update/shipping">   My Shipping Data </a>  &nbsp; |&nbsp;<a target="_blank" href="">    Reviews </a>  &nbsp; |&nbsp; <a target="_blank" href="">   Create an Account </a> &nbsp;  | &nbsp;<a href="/login">   Log In</a></p>
+      </div>
+      <div class="foot2">
+        <div class="v">
+          <p class="text6">Copyright © 2017 Music Store &nbsp;  <a target="_blank" href="">  Privacy Notice </a>   &nbsp;| &nbsp;   <a target="_blank" href=""> Conditions of Use</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="javascripts/searchResults.js"></script>
+  <script src="javascripts/cart.js"></script>
+  <script src="javascripts/store.js"></script>
+</body>
+</html>
