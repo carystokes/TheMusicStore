@@ -25,6 +25,10 @@ cart_server.use(bodyParser.urlencoded({ extended: true }));
 cart_server.use(bodyParser.json());
 cart_server.use(express.static('./static'));
 
+cart_server.get('/reset', function(req, res) {
+  res.render('reset.html')
+})
+
 cart_server.get('/registration', function(req, res) {
   res.render('registration.html')
 });

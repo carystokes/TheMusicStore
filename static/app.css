@@ -195,7 +195,7 @@ h1 {
 	text-align: center;
 }
 
-#shipping-address, #registration-form-container {
+#shipping-address, #registration-form-container, #change-password-form-container {
 	width: 75%;
 	margin: auto;
 	background-color: darkblue;
