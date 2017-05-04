@@ -13,7 +13,6 @@ var index = require('./routes/index');
 var customers = require('./routes/customers');
 var orders = require('./routes/orders');
 var products = require('./routes/products');
-var registration = require('./routes/registration')
 
 var cart_server = express();
 var db;
@@ -25,6 +24,28 @@ cart_server.set('views', './static');
 cart_server.use(bodyParser.urlencoded({ extended: true }));
 cart_server.use(bodyParser.json());
 cart_server.use(express.static('./static'));
+
+cart_server.get('/registration', function(req, res) {
+  res.render('registration.html')
+});
+
+cart_server.post('/registration', function(req, res) {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  var user = req.body
+  user['id'] = getRandomInt(1, 1000)
+  user['password'] = 'welcome1'
+  console.log(user);
+  db.collection('users').save(user, (err, result) => {
+    if (err) return console.log(err)
+    console.log('Registration Successful')
+    res.redirect('/login')
+  })
+})
 
 cart_server.use(session({
   secret: 'TheSECRET',
@@ -43,8 +64,16 @@ cart_server.get('/login', function(req, res) {
 });
 
 cart_server.post('/login', function(req, res) {
-  var user = {name: 'jdoe@mymusicstore.com', password: hashPW('welcome1')};
-  if (user.name == req.body.username && user.password === hashPW(req.body.password.toString())) {
+  var user, email, password;
+
+  db.collection('users').find( {email: req.body.username} ).toArray((err, results) => {
+    if (err) return console.log(err)
+    user = results[0]
+    email = user.email
+    password = hashPW(user.password)
+  })
+
+  setTimeout(function() {if (true) {
     req.session.regenerate(function() {
       req.session.user = user;
       req.session.success = 'Authenticated as ' + user.name;
@@ -55,18 +84,15 @@ cart_server.post('/login', function(req, res) {
       req.session.error = 'Authentication failed.'
     });
     res.redirect('/login');
-  }
+  }}, 500)
 })
 
-cart_server.use('/registration', registration);
 cart_server.use('/products', products);
 cart_server.use('/orders', orders);
 cart_server.use('/customers', customers);
 cart_server.use('/', index);
 
 var mongoKey = 'mongodb://' + MONGO_USERNAME + ':' + MONGO_PASSWORD + '@cluster0-shard-00-00-4iued.mongodb.net:27017,cluster0-shard-00-01-4iued.mongodb.net:27017,cluster0-shard-00-02-4iued.mongodb.net:27017/nodestuff?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin'
-console.log(mongoKey);
-debugger;
 
 MongoClient.connect(mongoKey, (err, database) => {
   if (err) return console.log(err)
