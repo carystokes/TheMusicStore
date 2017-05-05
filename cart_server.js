@@ -18,7 +18,7 @@ var cart_server = express();
 var db;
 
 cart_server.engine('html', require('ejs').renderFile);
-cart_server.set('view engine', 'html');
+cart_server.set('view engine', 'ejs');
 cart_server.set('views', './static');
 
 cart_server.use(bodyParser.urlencoded({ extended: true }));

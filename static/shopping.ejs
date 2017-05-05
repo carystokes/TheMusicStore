@@ -43,7 +43,7 @@
     <div class="clear"></div>
     <div class="nav">
       <div class="nav1">
-        <a href="/">Homepage</a>|<a target="_blank" href="">What's new?</a>|<a target="_blank" href="">Specials</a>|<a target="_blank" href="">Reviews</a>|<a target="_blank" href="">Contact us</a>
+        <a href="/">Homepage</a>|<a href="/products">Products</a>|<a target="_blank" href="">Specials</a>|<a target="_blank" href="">Reviews</a>|<a target="_blank" href="">Contact us</a>
       </div>
       <div class="form">
         <form method="post" action="handler.php" id="searchBox">
@@ -62,37 +62,21 @@
       <div class="what"><span class="text4">What's New Here?</span></div>
       <div class="categ"><span class="text4">Categories</span></div>
       <div class="blue">
+        <% for (var i = 0; i < 3; i++) { %>
         <div class="pic">
-          <p><img src="images/11.png" alt="img" /></p>
-          <p class="text5">Product # 017<br />Our price: <strong> $39.99</strong></p>
+          <p><img src=<%= albums[i].photo %> alt="img" /></p>
+          <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
           <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
         </div>
-        <div class="pic">
-          <p><img src="images/14.png" alt="img" /></p>
-          <p class="text5">Product # 018<br />Our price: <strong> $39.99</strong></p>
-          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="18"><img src="images/13.png" alt="img" /></a></p>
-        </div>
-        <div class="pic">
-          <p><img src="images/15.png" alt="img" /></p>
-          <p class="text5">Product # 019<br />Our price: <strong> $39.99</strong></p>
-          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="19"><img src="images/13.png" alt="img" /></a></p>
-        </div>
+        <% } %>
         <div class="clear"></div>
+        <% for (var i = 3; i < 6; i++) { %>
         <div class="pic">
-          <p><img src="images/18.png" alt="img" /></p>
-          <p class="text5">Product # 020<br />Our price: <strong> $39.99</strong></p>
-          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="20"><img src="images/13.png" alt="img" /></a></p>
+          <p><img src=<%= albums[i].photo %> alt="img" /></p>
+          <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
+          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
         </div>
-        <div class="pic">
-          <p><img src="images/17.png" alt="img" /></p>
-          <p class="text5">Product # 021<br />Our price: <strong> $39.99</strong></p>
-          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="21"><img src="images/13.png" alt="img" /></a></p>
-        </div>
-        <div class="pic">
-          <p><img src="images/16.png" alt="img" /></p>
-          <p class="text5">Product # 022<br />Our price: <strong> $39.99</strong></p>
-          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="22"><img src="images/13.png" alt="img" /></a></p>
-        </div>
+        <% } %>
       </div>
       <div class="ull">
         <ul>
