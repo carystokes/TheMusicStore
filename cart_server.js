@@ -29,6 +29,25 @@ cart_server.get('/reset', function(req, res) {
   res.render('reset.html')
 })
 
+cart_server.post('/reset', function(req, res) {
+  var user, email, password;
+
+  db.collection('users').find( {email: req.body.email} ).toArray((err, results) => {
+    if (err) return console.log(err)
+    user = results[0]
+    email = user.email
+    password = hashPW(user.password)
+  })
+
+  setTimeout(function() {if (hashPW(req.body.old_password) == password) {
+    db.collection('users').update( { 'email': req.body.email }, { $set: { 'password': req.body.new_password } })
+    res.redirect('/')
+  } else {
+    console.log(req.body)
+    res.redirect('/login');
+  }}, 1000)
+})
+
 cart_server.get('/registration', function(req, res) {
   res.render('registration.html')
 });
@@ -77,7 +96,7 @@ cart_server.post('/login', function(req, res) {
     password = hashPW(user.password)
   })
 
-  setTimeout(function() {if (true) {
+  setTimeout(function() {if (hashPW(req.body.password) == password) {
     req.session.regenerate(function() {
       req.session.user = user;
       req.session.success = 'Authenticated as ' + user.name;
