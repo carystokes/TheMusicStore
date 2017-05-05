@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="test.css" />
   <link rel="stylesheet" href="960.css" />
   <link rel="stylesheet" href="app.css" />
-  <title>My Orders</title>
+  <title>Products</title>
 </head>
 <body>
   <div class="content">
@@ -46,13 +46,49 @@
         <a href="/">Homepage</a>|<a href="/products">Products</a>|<a target="_blank" href="">Specials</a>|<a target="_blank" href="">Reviews</a>|<a target="_blank" href="">Contact us</a>
       </div>
       <div class="form">
-        <form method="post" id="searchBox">
+        <form method="post" action="handler.php" id="searchBox">
           <input name="textfield" type="text" class="colortext"  placeholder=" Search entire store..." id="searchText"/>
           <input type="submit" id="searchbutton" value="Search">
         </form>
       </div>
     </div>
-    <div id="searchResultsDiv">
+    <div class="main" ng-click="updateLink()">
+      <div class="what"><span class="text4">Our Products</span></div>
+      <div class="categ"><span class="text4">Categories</span></div>
+      <div class="blue">
+        <% for (var i = 0; i < 3; i++) { %>
+        <div class="pic">
+          <p><img src=<%= albums[i].photo %> alt="img" /></p>
+          <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
+          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
+        </div>
+        <% } %>
+        <div class="clear"></div>
+        <% for (var i = 3; i < 6; i++) { %>
+        <div class="pic">
+          <p><img src=<%= albums[i].photo %> alt="img" /></p>
+          <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
+          <p><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
+        </div>
+        <% } %>
+      </div>
+      <div class="ull">
+        <ul>
+          <li><a target="_blank" href="">Hip-Hop</a></li>
+          <li><a target="_blank" href="">Blues</a></li>
+          <li><a target="_blank" href="">Jazz</a></li>
+          <li><a target="_blank" href="">Rock'n roll</a></li>
+          <li><a target="_blank" href="">Indie Pop</a></li>
+          <li><a target="_blank" href="">Rock</a></li>
+          <li class="last"><a target="_blank" href="">Pop</a></li>
+        </ul>
+        <div class="b"><span class="text4">Bestsellers</span></div>
+        <div class="pic1">
+          <p class="text5">Product # 013</p><p><img  class="imgimg" src="images/22.png" alt="img" /></p>
+          <p class="text5">$29.99 <del>$39.99</del></p>
+          <p class="imgimg"><a class="det" target="_blank" href=""><img src="images/12.png" alt="img" /></a><a class="add" target="_blank" href="" id="13"><img src="images/13.png" alt="img" /></a></p>
+        </div>
+      </div>
     </div>
     <div class="clear"></div>
     <div class="footer">
