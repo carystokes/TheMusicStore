@@ -34,7 +34,7 @@
         </div>
         <div class="shop">
           <p class="text">
-            <a href="/orders">My Orders</a>|<a href="/customers/update/shipping">My Shipping Data</a>|<a target="_blank" href="">Create an Account</a>|<a target="_blank" href="login">Log In</a>
+            <a href="/orders">My Orders</a>|<a href="/customers/update/shipping">Shipping Data</a>|<a href="registration">Register</a>|<a href="login">Log In</a>
           </p>
         </div>
         <a href="./cart.html"</a>
@@ -43,7 +43,7 @@
     <div class="clear"></div>
     <div class="nav">
       <div class="nav1">
-        <a href="/">Homepage</a>|<a href="/products">Products</a>|<a target="_blank" href="">Specials</a>|<a target="_blank" href="">Reviews</a>|<a target="_blank" href="">Contact us</a>
+        <a href="/">Homepage</a>|<a href="/products">Products</a>|<a target="_blank" href="">Specials</a>|<a href="#">Reviews</a>|<a target="_blank" href="">Contact us</a>
       </div>
       <div class="form">
         <form method="post" action="handler.php" id="searchBox">
@@ -52,65 +52,49 @@
         </form>
       </div>
     </div>
-  	<div id="shipping-address">
-  		<form class="address-form" method="post" url="/customers/update/shipping">
+  	<div class="form-container">
+  		<form method="post" url="/customers/update/shipping">
         <fieldset>
-          <!-- Address form -->
-
-          <h2>Ship To:</h2>
-
-          <!-- full-name input-->
-          <div class="address-input-div">
-            <label class="address-input-label">Full Name</label>
-            <div class="controls">
+          <h2  class="form-label">Ship To:</h2>
+          <div class="input-div">
+            <label class="input-label">Full Name</label>
+            <div>
               <input class="address-input" id="full-name" name="full-name" type="text">
-              <p class="help-block"></p>
             </div>
           </div>
-          <!-- address-line1 input-->
-          <div class="address-input-div">
-            <label class="address-input-label">Address Line 1</label>
-            <div class="controls">
-              <input class="address-input" id="address-line1" name="address-line1" type="text">
-              <p class="help-block">Street address, P.O. box, company name, c/o</p>
+          <div class="input-div">
+            <label class="input-label">Address Line 1</label>
+            <div>
+              <input class="address-input" id="address-line1" name="address-line1" type="text" placeholder="Street address, P.O. box, etc.">
             </div>
           </div>
-          <!-- address-line2 input-->
-          <div class="address-input-div">
-            <label class="address-input-label">Address Line 2</label>
-            <div class="controls">
-              <input class="address-input" id="address-line2" name="address-line2" type="text">
-              <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+          <div class="input-div">
+            <label class="input-label">Address Line 2</label>
+            <div>
+              <input class="address-input" id="address-line2" name="address-line2" type="text" placeholder="Apartment, suite , unit, etc.">
             </div>
           </div>
-          <!-- city input-->
-          <div class="address-input-div">
-            <label class="address-input-label">City / Town</label>
-            <div class="controls">
+          <div class="input-div">
+            <label class="input-label">City / Town</label>
+            <div>
               <input class="address-input" id="city" name="city" type="text">
-              <p class="help-block"></p>
             </div>
           </div>
-          <!-- region input-->
-          <div class="address-input-div">
-            <label class="address-input-label">State / Province / Region</label>
-            <div class="controls">
+          <div class="input-div">
+            <label class="input-label">State / Province / Region</label>
+            <div>
               <input class="address-input" id="region" name="region" type="text">
-              <p class="help-block"></p>
             </div>
           </div>
-          <!-- postal-code input-->
-          <div class="address-input-div">
-            <label class="address-input-label">Zip / Postal Code</label>
-            <div class="controls">
+          <div class="input-div">
+            <label class="input-label">Zip / Postal Code</label>
+            <div>
               <input class="address-input" id="postal-code" name="postal-code" type="text">
-              <p class="help-block"></p>
             </div>
           </div>
-          <!-- country select -->
-          <div class="address-input-div">
-            <label class="address-input-label">Country</label>
-            <div class="controls">
+          <div class="input-div">
+            <label class="input-label">Country</label>
+            <div>
               <select class="address-input" id="country" name="country">
                 <option value="" selected="selected">(please select a country)</option>
                 <option value="US">United States</option>
@@ -355,13 +339,13 @@
               </select>
             </div>
           </div>
-          <input type="submit" name="Submit">
+          <input type="submit" name="Submit" class="submit-button">
         </fieldset>
       </form>
   	</div>
   </div>
   <div class="footer">
-    <div class="foot1"><p class="text6"><a href="/orders">My Orders </a> &nbsp;  |&nbsp; <a href="/customers/update/shipping">   My Shipping Data </a>  &nbsp; |&nbsp;<a target="_blank" href="">    Reviews </a>  &nbsp; |&nbsp; <a target="_blank" href="">   Create an Account </a> &nbsp;  | &nbsp;<a href="/login">   Log In</a></p>
+    <div class="foot1"><p class="text6"><a href="/orders">My Orders </a> &nbsp;  |&nbsp; <a href="/customers/update/shipping">   Shipping Data </a>  &nbsp; |&nbsp;<a href="#">    Reviews </a>  &nbsp; |&nbsp; <a href="registration">   Register </a> &nbsp;  | &nbsp;<a href="/login">   Log In</a></p>
     </div>
     <div class="foot2">
       <div class="v">

@@ -4,6 +4,7 @@
 body{
 	/*background-image:url(../images/01.png);*/
 	height:1300px;}
+
 .content{
 	 margin-left: auto;
   margin-right: auto;
@@ -316,58 +317,4 @@ pic1 {
 	font-size:11px;
 	color:#4085fe;
 	text-decoration:none;
-}
-
-#login-form-container {
-	display: block;
-	margin-left: auto;
-  margin-right: auto;
-	margin-top: 0px;
-	margin-bottom: 40px;
-	width: 360px;
-	color: white;
-	background-color: black;
-}
-
-#login-bar {
-	width:360px;
-	margin-left: auto;
-  margin-right: auto;
-	margin-top: 30px;
-	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
-	font-family: Arial, Helvitica, sans-serif;
-	font-size: 14px;
-}
-
-#login-form {
-	width: 360px;
-	margin-right: 0px;
-}
-
-#email {
-	width: 223px;
-}
-
-#password {
-	width: 200px;
-}
-
-label {
-	padding-right: 10px;
-	padding-left: 20px;
-	padding-top: 10px;
-}
-
-#login-button {
-	background-color: #00c5ff;
-	color: white;
-	margin-left: 20px;
-	border: none;
-}
-
-.inputfield {
-	margin-bottom: 10px;
 }

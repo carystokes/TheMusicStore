@@ -15,7 +15,6 @@ MongoClient.connect(mongoKey, (err, database) => {
 router.get('/', function(req, res) {
   db.collection('albums').find().toArray((err, results) => {
     if (err) return console.log(err)
-    console.log(results)
     res.render('shopping.ejs', {albums: results})
   })
 })

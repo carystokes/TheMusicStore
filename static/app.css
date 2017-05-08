@@ -1,3 +1,50 @@
+.form-container {
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 360px;
+	color: darkblue;
+	background-color: white;
+	padding: 50px;
+}
+
+.form-label {
+	margin-left: 20px;
+	color: black;
+}
+
+.submit-button {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+#email {
+	width: 223px;
+}
+
+#password {
+	width: 200px;
+}
+
+label {
+	padding-right: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+#login-button {
+	background-color: #00c5ff;
+	color: white;
+	margin-left: 20px;
+	border: none;
+}
+
+.inputfield {
+	margin-bottom: 10px;
+}
+
 h1 {
 	text-align: center;
 	color: white;
@@ -195,30 +242,16 @@ h1 {
 	text-align: center;
 }
 
-#shipping-address, #registration-form-container, #change-password-form-container {
-	width: 75%;
-	margin: auto;
-	background-color: darkblue;
-	padding: 50px;
-	color: white;
-}
-
 .address-input {
 	width: 200px;
 }
 
-.address-input-label {
+.input-label {
 	text-align: left;
 	padding-left: 0px;
 }
 
-.address-form {
-	width: 60%;
-	margin: auto;
-	padding: 50px;
-}
-
-.address-input-div {
-	margin-left: 30px;
-	margin-bottom: 20px;
+.input-div {
+	margin-left: 50px;
+	margin-bottom: 25px;
 }
