@@ -26,7 +26,7 @@ cart_server.use(bodyParser.json());
 cart_server.use(express.static('./static'));
 
 cart_server.get('/reset', function(req, res) {
-  res.render('reset.html')
+  res.render('reset.ejs')
 })
 
 cart_server.post('/reset', function(req, res) {
@@ -43,13 +43,12 @@ cart_server.post('/reset', function(req, res) {
     db.collection('users').update( { 'email': req.body.email }, { $set: { 'password': req.body.new_password } })
     res.redirect('/')
   } else {
-    console.log(req.body)
     res.redirect('/login');
   }}, 1000)
 })
 
 cart_server.get('/registration', function(req, res) {
-  res.render('registration.html')
+  res.render('registration.ejs')
 });
 
 cart_server.post('/registration', function(req, res) {
@@ -62,7 +61,6 @@ cart_server.post('/registration', function(req, res) {
   var user = req.body
   user['id'] = getRandomInt(1, 1000)
   user['password'] = 'welcome1'
-  console.log(user);
   db.collection('users').save(user, (err, result) => {
     if (err) return console.log(err)
     console.log('Registration Successful')
@@ -83,7 +81,7 @@ cart_server.get('/logout', function(req, res) {
 })
 
 cart_server.get('/login', function(req, res) {
-  res.render('authenticate.html');
+  res.render('authenticate.ejs');
 });
 
 cart_server.post('/login', function(req, res) {
