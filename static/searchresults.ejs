@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="app.css" />
   <title>My Orders</title>
 </head>
-<body>
+<body ng-app="linkToCart" ng-controller="cartLinkCtrl">
   <div class="content">
     <div class="header">
       <div class="logo"><img src="images/02.png" alt="img" /></div>
@@ -37,7 +37,7 @@
             <a href="/orders">My Orders</a>|<a href="/customers/update/shipping">Shipping Data</a>|<a href="registration">Register</a>|<a href="login">Log In</a>
           </p>
         </div>
-        <a href="./cart.html"</a>
+        <a href="./cart" ng-bind="cartLinkText" id="cartLink">{{ cartLinkText }}</a>
       </div>
     </div>
     <div class="clear"></div>
@@ -66,8 +66,10 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="javascripts/searchResults.js"></script>
-  <script src="javascripts/cart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="javascripts/store.js"></script>
+  <script src="javascripts/cart.js"></script>
+  <script src="javascripts/linkToCart.js"></script>
+  <script src="javascripts/searchResults.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ var index = require('./routes/index');
 var customers = require('./routes/customers');
 var orders = require('./routes/orders');
 var products = require('./routes/products');
+var cart = require('./routes/cart');
 
 var cart_server = express();
 var db;
@@ -108,6 +109,7 @@ cart_server.post('/login', function(req, res) {
   }}, 500)
 })
 
+cart_server.use('/cart', cart);
 cart_server.use('/products', products);
 cart_server.use('/orders', orders);
 cart_server.use('/customers', customers);

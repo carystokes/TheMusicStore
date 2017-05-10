@@ -13,9 +13,13 @@ Cart.prototype.findAlbum = function(albumId) {
   return false
 }
 
-Cart.prototype.findAndAdd = function(addAlbumId) {
+Cart.prototype.findAndAddSetUp = function(e) {
   e.preventDefault();
   var addAlbumId = e.currentTarget.id;
+  Cart.prototype.findAndAdd(addAlbumId);
+}
+
+Cart.prototype.findAndAdd = function(addAlbumId) {
   var addAlbum = Cart.prototype.findAlbum(addAlbumId);
   cart.push(addAlbum);
   Cart.prototype.save();
@@ -56,7 +60,7 @@ Cart.prototype.cartInit = function() {
     var addButtons = $('.add');
     var len = addButtons.length;
     for (var i = 0; i < len; i++) {
-      addButtons[i].addEventListener('click', this.Cart.prototype.findAndAdd);
+      addButtons[i].addEventListener('click', this.Cart.prototype.findAndAddSetUp);
     }
     cart = [];
     if (sessionStorage.getItem('yourCart')) {

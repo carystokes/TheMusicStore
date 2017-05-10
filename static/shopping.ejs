@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="app.css" />
   <title>The Music Store</title>
 </head>
-<body>
+<body ng-app="linkToCart" ng-controller="cartLinkCtrl">
   <div class="content">
     <div class="header">
       <div class="logo"><img src="images/02.png" alt="img" /></div>
@@ -37,7 +37,7 @@
             <a href="/orders">My Orders</a>|<a href="/customers/update/shipping">Shipping Data</a>|<a href="registration">Register</a>|<a href="login">Log In</a>
           </p>
         </div>
-        <a href="./cart.html"</a>
+        <a href="./cart" ng-bind="cartLinkText" id="cartLink">{{ cartLinkText }}</a>
       </div>
     </div>
     <div class="clear"></div>
@@ -46,7 +46,7 @@
         <a href="/">Homepage</a>|<a href="/products">Products</a>|<a href="">Specials</a>|<a href="#">Reviews</a>|<a href="">Contact us</a>
       </div>
       <div class="form">
-        <form method="post" action="handler.php" id="searchBox">
+        <form method="post" id="searchBox">
           <input name="textfield" type="text" class="colortext"  placeholder=" Search entire store..." id="searchText"/>
           <input type="submit" id="searchbutton" value="Search">
         </form>
@@ -108,7 +108,9 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="javascripts/cart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="javascripts/store.js"></script>
+  <script src="javascripts/cart.js"></script>
+  <script src="javascripts/linkToCart.js"></script>
 </body>
 </html>
