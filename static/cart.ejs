@@ -2,15 +2,15 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-  <link rel="stylesheet" href="test.css" />
-  <link rel="stylesheet" href="960.css" />
-  <link rel="stylesheet" href="app.css" />
-  <title>My Orders</title>
+  <link rel="stylesheet" href="../../test.css" />
+  <link rel="stylesheet" href="../../960.css" />
+  <link rel="stylesheet" href="../../app.css" />
+  <title>Shipping Address</title>
 </head>
 <body ng-app="linkToCart" ng-controller="cartLinkCtrl">
   <div class="content">
     <div class="header">
-      <div class="logo"><img src="images/02.png" alt="img" /></div>
+      <div class="logo"><img src="../../images/02.png" alt="img" /></div>
       <div class="search" id="header-right-top">
         <div class="Currencies">Currencies:</div>
         <div class="US">
@@ -52,32 +52,18 @@
         </form>
       </div>
     </div>
-    <div class="order-block">
-      <h2>Here is a history of your orders</h2>
-      <ul>
-        <li>Billy Joel, Piano Man, 4/16/16, $32.95</li>
-        <li>Pink Floyd, The Wall, 7/4/16, $26.95</li>
-        <li>Billie Holiday, Lady in Satin, 10/31/16, $29.95</li>
-        <li>Wynton Marsalis, Baroque Music for Trumpets, 12/25/16, $28.95</li>
+    <div id="yourCart">
+      <h1>Items in Your Cart:</h1>
+      <ul id="yourCartList">
       </ul>
     </div>
-    <div>
-      <h2 id="whats-hot">Trending now!</h2>
-      <div class="img">
-        <img class="one"  src="images/05.png" alt="img" />
-        <img class="one" src="images/06.png" alt="img" />
-        <img class="one" src="images/07.png" alt="img" />
-        <img src="images/08.png" alt="img" />
-      </div>
-      <a href="/" id="keep-shopping">Keep Shopping</a>
+  </div>
+  <div class="footer">
+    <div class="foot1"><p class="text6"><a href="/orders">My Orders </a> &nbsp;  |&nbsp; <a href="/customers/update/shipping">   Shipping Data </a>  &nbsp; |&nbsp;<a href="#">    Reviews </a>  &nbsp; |&nbsp; <a href="registration">   Register </a> &nbsp;  | &nbsp;<a href="/login">   Log In</a></p>
     </div>
-    <div class="footer">
-      <div class="foot1"><p class="text6"><a href="/orders">My Orders </a> &nbsp;  |&nbsp; <a href="/customers/update/shipping">   Shipping Data </a>  &nbsp; |&nbsp;<a href="#">    Reviews </a>  &nbsp; |&nbsp; <a href="registration">   Register </a> &nbsp;  | &nbsp;<a href="/login">   Log In</a></p>
-      </div>
-      <div class="foot2">
-        <div class="v">
-          <p class="text6">Copyright © 2017 Music Store &nbsp;  <a href="">  Privacy Notice </a>   &nbsp;| &nbsp;   <a href=""> Conditions of Use</a></p>
-        </div>
+    <div class="foot2">
+      <div class="v">
+        <p class="text6">Copyright © 2017 Music Store &nbsp;  <a href="">  Privacy Notice </a>   &nbsp;| &nbsp;   <a href=""> Conditions of Use</a></p>
       </div>
     </div>
   </div>
@@ -86,5 +72,6 @@
   <script src="javascripts/store.js"></script>
   <script src="javascripts/cart.js"></script>
   <script src="javascripts/linkToCart.js"></script>
+  <script src="javascripts/showCart.js"></script>
 </body>
 </html>
