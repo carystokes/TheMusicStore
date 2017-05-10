@@ -99,7 +99,7 @@ cart_server.post('/login', function(req, res) {
     req.session.regenerate(function() {
       req.session.user = user;
       req.session.success = 'Authenticated as ' + user.name;
-      res.redirect('/orders')
+      res.redirect('/')
     });
   } else {
     req.session.regenerate(function() {

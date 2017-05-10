@@ -7,7 +7,7 @@ app.controller('cartLinkCtrl', function($scope) {
   $scope.updateLink = function() {
     yourCart = JSON.parse(sessionStorage.getItem('yourCart'));
     var cartLen = cartLength();
-    $scope.cartLinkText = "cart(" + cartLen + ")";
+    $scope.cartLinkText = "Your Cart(" + cartLen + ")";
   }
 
   function cartLength() {

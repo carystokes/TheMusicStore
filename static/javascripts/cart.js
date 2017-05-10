@@ -56,7 +56,6 @@ Cart.prototype.save = function() {
 Cart.prototype.cartInit = function() {
   function delayMe() {
     albums = JSON.parse(sessionStorage.getItem("albums"));
-    console.log('In cart ' + albums);
     var addButtons = $('.add');
     var len = addButtons.length;
     for (var i = 0; i < len; i++) {
