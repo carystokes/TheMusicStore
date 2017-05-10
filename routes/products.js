@@ -12,7 +12,19 @@ MongoClient.connect(mongoKey, (err, database) => {
   db = database
 })
 
+router.get('/albums.json', function(req, res) {
+  db.collection('albums').find().toArray((err, results) => {
+    if (err) return console.log(err)
+    console.log(results)
+    res.json(results);
+  })
+})
+
 router.get('/', function(req, res) {
+  db.collection('users').find().toArray((err, results) => {
+    if (err) return console.log(err)
+    console.log(results)
+  })
   db.collection('albums').find().toArray((err, results) => {
     if (err) return console.log(err)
     console.log(results)

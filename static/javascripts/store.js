@@ -24,7 +24,7 @@ function handleAjaxResponse(e) {
 function getData() {
 	var ajax = getXMLHttpRequestObject();
 	ajax.onreadystatechange = handleAjaxResponse;
-	ajax.open('GET', 'javascripts/albums.json', true);
+	ajax.open('GET', '/products/albums.json', true);
 	ajax.send(null);
 	return false;
 }

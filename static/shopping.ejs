@@ -66,7 +66,7 @@
         <div class="pic">
           <p><img src=<%= albums[i].photo %> alt="img" /></p>
           <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
-          <p><a class="det" href=""><img src="images/12.png" alt="img" /></a><a class="add" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
+          <p><a class="det" href=""><img src="images/12.png" alt="img" /></a><a class="add" href="" id="<%= albums[i].id %>"><img src="images/13.png" alt="img" /></a></p>
         </div>
         <% } %>
         <div class="clear"></div>
@@ -74,7 +74,7 @@
         <div class="pic">
           <p><img src=<%= albums[i].photo %> alt="img" /></p>
           <p class="text5">Product # <%= albums[i].id %><br />Our price: <strong> $<%= albums[i].price %></strong></p>
-          <p><a class="det" href=""><img src="images/12.png" alt="img" /></a><a class="add" href="" id="17"><img src="images/13.png" alt="img" /></a></p>
+          <p><a class="det" href=""><img src="images/12.png" alt="img" /></a><a class="add" href="" id="<%= albums[i].id %>"><img src="images/13.png" alt="img" /></a></p>
         </div>
         <% } %>
       </div>
@@ -108,7 +108,6 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="javascripts/searchResults.js"></script>
   <script src="javascripts/cart.js"></script>
   <script src="javascripts/store.js"></script>
 </body>

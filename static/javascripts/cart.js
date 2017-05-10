@@ -13,13 +13,9 @@ Cart.prototype.findAlbum = function(albumId) {
   return false
 }
 
-Cart.prototype.findAndAddSetUp = function(e) {
+Cart.prototype.findAndAdd = function(addAlbumId) {
   e.preventDefault();
   var addAlbumId = e.currentTarget.id;
-  Cart.prototype.findAndAdd(addAlbumId);
-}
-
-Cart.prototype.findAndAdd = function(addAlbumId) {
   var addAlbum = Cart.prototype.findAlbum(addAlbumId);
   cart.push(addAlbum);
   Cart.prototype.save();
@@ -56,10 +52,11 @@ Cart.prototype.save = function() {
 Cart.prototype.cartInit = function() {
   function delayMe() {
     albums = JSON.parse(sessionStorage.getItem("albums"));
+    console.log('In cart ' + albums);
     var addButtons = $('.add');
     var len = addButtons.length;
     for (var i = 0; i < len; i++) {
-      addButtons[i].addEventListener('click', this.Cart.prototype.findAndAddSetUp);
+      addButtons[i].addEventListener('click', this.Cart.prototype.findAndAdd);
     }
     cart = [];
     if (sessionStorage.getItem('yourCart')) {
