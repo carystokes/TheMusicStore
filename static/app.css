@@ -47,7 +47,7 @@ label {
 
 h1 {
 	text-align: center;
-	color: white;
+	color: black;
 }
 
 #sales-graph {
@@ -201,14 +201,30 @@ h1 {
 }
 
 #yourCart {
-	width: 40%;
+	width: 50%;
 	margin: auto;
 	margin-bottom: 60px;
+	color: black;
 }
 
 .cartItem {
 	color: black;
 	font-size: 1.5rem;
+}
+
+#checkoutButtonDiv {
+	display: flex;
+	align-items: center;
+}
+
+#checkout {
+	background-color: #00c5ff;
+	color: white;
+	margin: auto;
+	height: 24px;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
 }
 
 .nav1 a {
