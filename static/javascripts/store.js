@@ -46,7 +46,6 @@ function artistSearch(searchArtist) {
 
 function searching(evt) {
   evt.preventDefault();
-  debugger;
   var results = artistSearch($('#searchText').val());
   sessionStorage.setItem('searchResults', JSON.stringify(results));
 }

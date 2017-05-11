@@ -2,12 +2,12 @@ var app = angular.module('linkToCart', []);
 app.controller('cartLinkCtrl', function($scope) {
   var yourCart = JSON.parse(sessionStorage.getItem('yourCart'));
   var cartLen = cartLength();
-  $scope.cartLinkText = "cart(" + cartLen + ")";
+  $scope.cartLinkText = "Cart(" + cartLen + ")";
 
   $scope.updateLink = function() {
     yourCart = JSON.parse(sessionStorage.getItem('yourCart'));
     var cartLen = cartLength();
-    $scope.cartLinkText = "Your Cart(" + cartLen + ")";
+    $scope.cartLinkText = "Cart(" + cartLen + ")";
   }
 
   function cartLength() {
