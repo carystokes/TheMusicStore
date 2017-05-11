@@ -50,9 +50,9 @@ function searching(evt) {
   sessionStorage.setItem('searchResults', JSON.stringify(results));
 }
 
-function initAgain() {
+function init() {
   getData();
   $("#searchBox").submit(searching)
 }
 
-window.addEventListener("load", initAgain);
+window.addEventListener("load", init);

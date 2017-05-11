@@ -9,8 +9,8 @@ router.get('/', function(req, res) {
   }
 });
 
-router.post('/add', function(req, res) {
-  res.json(404, {status:false, message:"no results found"})
+router.post('/checkout', function(req, res) {
+  res.render('checkout.ejs')
 })
 
 module.exports = router;
