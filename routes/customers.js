@@ -10,7 +10,6 @@ router.get('/update/shipping', function(req, res) {
 });
 
 router.post('/update/shipping', function(req, res) {
-  console.log(req.body);
   res.send('Your data has been successfully updated');
 });
 

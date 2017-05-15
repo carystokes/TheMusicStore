@@ -212,7 +212,7 @@ h1 {
 	font-size: 1.5rem;
 }
 
-#checkoutButtonDiv {
+#checkoutButtonForm {
 	display: flex;
 	align-items: center;
 }

@@ -1,4 +1,5 @@
-function sendCartData() {
+function sendCartData(evt) {
+  evt.preventDefault();
   cartData = sessionStorage.getItem("yourCart");
   cartDataJSON = JSON.stringify(cartData);
   $.ajax({
@@ -10,7 +11,7 @@ function sendCartData() {
 }
 
 function init() {
-  $("#checkout").submit(sendCartData)
+  $("#checkoutButtonForm").submit(sendCartData)
 }
 
 window.addEventListener("load", init);
