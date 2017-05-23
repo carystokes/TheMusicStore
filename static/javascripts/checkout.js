@@ -4,7 +4,7 @@ function sendCartData(evt) {
   cartDataJSON = JSON.stringify(cartData);
   $.ajax({
     type: "POST",
-    url: "/orders/checkout",
+    url: "/checkout",
     data: cartData,
     dataType: "json"
   })

@@ -14,6 +14,7 @@ var customers = require('./routes/customers');
 var orders = require('./routes/orders');
 var products = require('./routes/products');
 var cart = require('./routes/cart');
+var checkout = require('./routes/checkout');
 
 var cart_server = express();
 var db;
@@ -113,6 +114,7 @@ cart_server.use('/cart', cart);
 cart_server.use('/products', products);
 cart_server.use('/orders', orders);
 cart_server.use('/customers', customers);
+cart_server.use('/checkout', checkout);
 cart_server.use('/', index);
 
 var mongoKey = 'mongodb://' + MONGO_USERNAME + ':' + MONGO_PASSWORD + '@cluster0-shard-00-00-4iued.mongodb.net:27017,cluster0-shard-00-01-4iued.mongodb.net:27017,cluster0-shard-00-02-4iued.mongodb.net:27017/nodestuff?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin'

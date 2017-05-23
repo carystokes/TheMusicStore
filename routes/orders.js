@@ -9,8 +9,18 @@ router.get('/', function(req, res) {
   }
 });
 
-router.post('/checkout', function(req, res) {
+router.get('/checkout', function(req, res) {
+  console.log('Getting checkout page');
+  res.render('static/checkout')
+})
+
+router.post('/checkout', function(req, res, next) {
   console.log('Checking Out');
+  next()
+})
+
+router.all('/checkout', function(req, res) {
+  console.log('Getting checkout page');
   res.render('checkout')
 })
 
